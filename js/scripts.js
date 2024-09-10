@@ -52,3 +52,54 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function active(){
+console.log("done");
+}
+services = document.getElementById("servicesT");
+agency = document.getElementById("agencyT");
+about = document.getElementById("aboutT") ;
+branches = document.getElementById("branchesT") ;
+contact = document.getElementById("contactT") ;
+
+function removeActive(){
+    services.classList.remove("active");
+    agency.classList.remove("active");
+    about.classList.remove("active");
+    branches.classList.remove("active");
+    contact.classList.remove("active");
+}
+
+
+services.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('services was clicked!');
+    removeActive();
+    services.classList.add("active");
+
+  });
+
+agency.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('agency was clicked!');
+    removeActive();
+    agency.classList.add("active");
+  });
+  about.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('about was clicked!');
+    removeActive();
+    about.classList.add("active");
+});
+  branches.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('branches was clicked!');
+    removeActive();
+    branches.classList.add("active");
+  });
+  contact.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('contact was clicked!');
+    removeActive();
+    contact.classList.add("active");
+  });
