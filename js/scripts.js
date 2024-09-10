@@ -56,6 +56,9 @@ window.addEventListener('DOMContentLoaded', event => {
 function active(){
 console.log("done");
 }
+
+home = document.getElementById("homeT");
+activities = document.getElementById("activitiesT");
 services = document.getElementById("servicesT");
 agency = document.getElementById("agencyT");
 about = document.getElementById("aboutT") ;
@@ -63,6 +66,8 @@ branches = document.getElementById("branchesT") ;
 contact = document.getElementById("contactT") ;
 
 function removeActive(){
+    home.classList.remove("active");
+    activities.classList.remove("active");
     services.classList.remove("active");
     agency.classList.remove("active");
     about.classList.remove("active");
@@ -71,6 +76,20 @@ function removeActive(){
 }
 
 
+home.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('services was clicked!');
+    removeActive();
+    home.classList.add("active");
+
+  });
+  activities.addEventListener('click', () => { 
+    // specify the action to take when the div is clicked
+    console.log('services was clicked!');
+    removeActive();
+    activities.classList.add("active");
+
+  });
 services.addEventListener('click', () => { 
     // specify the action to take when the div is clicked
     console.log('services was clicked!');
